@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manish Tomar | Founder & Executive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --accent: #d4af37;
+            --text-main: #ffffff;
+            --text-dim: #a3a3a3;
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        .serif { font-family: 'Cormorant Garamond', serif; }
+
+        /* Alignment & Grid Utilities */
+        .container-custom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .container-custom { padding: 0 1.5rem; }
+        }
+
+        /* Bordered Structure */
+        .grid-line {
+            border-left: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+        }
+
+        .section-padding { padding: 120px 0; }
+
+        /* Typography Alignment */
+        .heading-xl {
+            font-size: clamp(3rem, 10vw, 8rem);
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+            font-weight: 700;
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--accent);
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .reveal { opacity: 0; transform: translateY(30px); }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            mix-blend-mode: difference;
+            padding: 2rem 4rem;
+        }
+
+        /* Custom Hover */
+        .hover-gold { transition: color 0.3s ease; }
+        .hover-gold:hover { color: var(--accent); }
+
+        .line-decorator {
+            height: 1px;
+            background: var(--border);
+            width: 100%;
+            margin: 4rem 0;
+        }
+
+        /* Image Placeholder Style (since no external images used) */
+        .profile-box {
+            aspect-ratio: 4/5;
+            background: linear-gradient(45deg, #111, #1a1a1a);
+            border: 1px solid var(--border);
+            position: relative;
+        }
+
+        .profile-box::after {
+            content: 'M.T.';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5rem;
+            font-family: 'Cormorant Garamond';
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="flex justify-between items-center w-full">
+        <div class="serif text-3xl font-bold tracking-widest text-white">M.T.</div>
+        <div class="hidden md:flex space-x-12 text-[10px] font-semibold uppercase tracking-[0.2em] text-white">
+            <a href="#intro" class="hover-gold">Identity</a>
+            <a href="#informatics" class="hover-gold">Informatics</a>
+            <a href="#kitchen" class="hover-gold">Culinary</a>
+            <a href="#contact" class="hover-gold">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="intro" class="min-h-screen flex flex-col justify-center container-custom">
+        <span class="tag reveal">Portfolio of a Serial Entrepreneur</span>
+        <h1 class="heading-xl reveal">Manish<br><span class="serif italic font-normal text-white/40">Tomar</span></h1>
+        
+        <div class="grid md:grid-cols-12 gap-8 mt-20 items-end">
+            <div class="md:col-span-5 reveal">
+                <p class="text-xl text-white font-light leading-relaxed">
+                    Founder of <span class="text-[#d4af37]">Kavish Informatics</span>. Leading high-end IT architecture for sports networks and modern enterprises.
+                </p>
+            </div>
+            <div class="md:col-span-7 flex justify-end reveal">
+                <div class="text-[10px] uppercase tracking-[0.4em] text-white/40 rotate-90 origin-right translate-y-[-100px]">
+                    Established 2014
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Detailed Bio -->
+    <section class="section-padding border-t border-white/10">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-4 reveal">
+                    <h2 class="serif text-4xl italic mb-6">The Founder's <br>Philosophy</h2>
+                    <div class="h-px w-24 bg-[#d4af37]"></div>
+                </div>
+                <div class="md:col-span-8 reveal">
+                    <div class="space-y-8 text-white/70 text-lg font-light leading-loose">
+                        <p>
+                            Manish Tomar is a distinguished systems architect whose career is anchored in the pursuit of absolute operational precision. As the visionary behind <strong>Kavish Informatics</strong>, he has bridged the critical gap between complex IT hardware and seamless business continuity. With a specialization in court-side automation for international sports networks and industrial-scale infrastructure, Manish has spent over a decade designing environments that demand zero latency and 100% reliability.
+                        </p>
+                        <p>
+                            His leadership style is defined by "The Architecture of Discipline"—a belief that whether one is managing a high-throughput server farm or a premium kitchen line, the core systems must be unshakeable. This multidisciplinary mastery allows him to manage the digital backbone of major organizations while simultaneously pioneering innovation in the food and beverage industry through The Mom's Kitchen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IT Services - Kavish Informatics -->
+    <section id="informatics" class="section-padding bg-[#0e0e0e]">
+        <div class="container-custom">
+            <div class="mb-20">
+                <span class="tag reveal">Executive Service Portfolio</span>
+                <h2 class="serif text-6xl font-semibold reveal">Kavish Informatics</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-0 border-t border-white/10">
+                <div class="reveal p-12 border-b border-r border-white/10 hover:bg-white/[0.02] transition-colors">
+                    <span class="text-[10px] text-[#d4af37] block mb-8">01.</span>
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-tighter">Network Design</h3>
+                    <p class="text-sm text-white/50 leading-relaxed font-light">Custom enterprise fiber-optic networks, server configurations, and high-availability firewall security systems.</p>
+                </div>
+                <div class="reveal p-12 border-b border-r border-white/10 hover:bg-white/[0.02] transition-colors">
+                    <span class="text-[10px] text-[#d4af37] block mb-8">02.</span>
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-tighter">Surveillance</h3>
+                    <p class="text-sm text-white/50 leading-relaxed font-light">Advanced IP-based CCTV integration with remote monitoring and AI-driven security protocols for large-scale sites.</p>
+                </div>
+                <div class="reveal p-12 border-b border-white/10 hover:bg-white/[0.02] transition-colors">
+                    <span class="text-[10px] text-[#d4af37] block mb-8">03.</span>
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-tighter">Access Control</h3>
+                    <p class="text-sm text-white/50 leading-relaxed font-light">Modern QR-based entry and biometric authentication systems for streamlined corporate and sports academy access.</p>
+                </div>
+                <div class="reveal p-12 border-r border-white/10 hover:bg-white/[0.02] transition-colors">
+                    <span class="text-[10px] text-[#d4af37] block mb-8">04.</span>
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-tighter">Asset Tracking</h3>
+                    <p class="text-sm text-white/50 leading-relaxed font-light">Real-time digital inventory solutions for hardware lifecycle management across multiple geographic locations.</p>
+                </div>
+                <div class="reveal p-12 border-r border-white/10 hover:bg-white/[0.02] transition-colors">
+                    <span class="text-[10px] text-[#d4af37] block mb-8">05.</span>
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-tighter">Sports Tech</h3>
+                    <p class="text-sm text-white/50 leading-relaxed font-light">Dedicated court-side technical support including scoreboard integration, countdown systems, and broadcast automation.</p>
+                </div>
+                <div class="reveal p-12 hover:bg-white/[0.02] transition-colors">
+                    <span class="text-[10px] text-[#d4af37] block mb-8">06.</span>
+                    <h3 class="text-lg font-bold mb-4 uppercase tracking-tighter">Managed IT</h3>
+                    <p class="text-sm text-white/50 leading-relaxed font-light">Proactive 24/7 technical helpdesk, server maintenance, and strategic digital transformation consulting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culinary Excellence - The Mom's Kitchen -->
+    <section id="kitchen" class="section-padding bg-white text-black">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-6 reveal">
+                    <span class="text-[10px] font-bold text-[#d4af37] uppercase tracking-[0.4em] mb-4 block">Executive Brief</span>
+                    <h2 class="serif text-7xl mb-8 leading-none">The Mom's <br><span class="italic">Kitchen</span></h2>
+                    
+                    <div class="text-lg leading-relaxed space-y-6 text-black/70">
+                        <p>
+                            <strong>The Mom’s Kitchen</strong> is a masterclass in culinary precision, founded by Manish Tomar to harmonize traditional soul-food with the efficiency of modern systems. Located in the industrial heart of Okhla, the brand provides an elevated breakfast and snack experience for discerning professionals who refuse to compromise on health or heritage.
+                        </p>
+                        <p>
+                            By integrating <strong>Systemic SOPs</strong>—standardized operating procedures typically found in high-tech manufacturing—Manish has eliminated the variables that usually compromise street-side food quality. Every meal, from our signature Indori Poha to our crispy Masala Dosas, follows a rigorous "Recipe Architecture" that ensures consistency, hygiene, and unparalleled nutrition. Utilizing a <strong>Digital-First Operations Model</strong>, the result is a sanctuary for authentic Indian taste, where every plate is a commitment to purity and every process is an example of technological finesse.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-12 flex space-x-12 border-t border-black/10 pt-8">
+                        <div>
+                            <span class="block text-2xl font-bold">500+</span>
+                            <span class="text-[10px] uppercase font-bold text-black/40">Daily Servings</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold">100%</span>
+                            <span class="text-[10px] uppercase font-bold text-black/40">Pure Ingredients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-6 reveal">
+                    <div class="profile-box bg-black/5 border-black/10 flex items-center justify-center">
+                        <span class="serif text-black/10 text-8xl italic">Authentic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-black border-t border-white/10">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-12 reveal mb-16">
+                    <span class="tag">Direct Access</span>
+                    <h2 class="serif text-6xl italic">Start a <span class="text-[#d4af37]">Consultation</span></h2>
+                </div>
+                
+                <div class="md:col-span-6 reveal">
+                    <div class="text-white/40 uppercase text-[10px] font-bold tracking-widest mb-6">Corporate Address</div>
+                    <p class="text-2xl font-light mb-12">FIEE Complex, Okhla Industrial Area,<br>Phase 2, New Delhi, India.</p>
+                    
+                    <div class="text-white/40 uppercase text-[10px] font-bold tracking-widest mb-6">Inquiry Line</div>
+                    <a href="https://wa.me/917557575736" class="text-3xl font-bold hover:text-[#d4af37] transition-colors">+91 7557575736</a>
+                </div>
+                
+                <div class="md:col-span-6 reveal flex items-end justify-end">
+                    <a href="https://wa.me/917557575736" class="bg-[#d4af37] text-black px-12 py-6 text-xs font-bold uppercase tracking-widest hover:bg-white transition-all">
+                        Connect on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5">
+        <div class="container-custom flex flex-col md:flex-row justify-between text-[10px] uppercase tracking-[0.4em] text-white/20">
+            <div>© 2024 Manish Tomar</div>
+            <div class="mt-4 md:mt-0">Kavish Informatics • The Mom's Kitchen</div>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Initial Animations
+        window.addEventListener('load', () => {
+            gsap.utils.toArray('.reveal').forEach((el, i) => {
+                gsap.to(el, {
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 90%",
+                        toggleActions: "play none none none"
+                    },
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    delay: i * 0.1,
+                    ease: "power3.out"
+                });
+            });
+        });
+
+        // Smooth Scroll effect for links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
